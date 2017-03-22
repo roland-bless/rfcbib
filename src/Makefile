@@ -28,7 +28,7 @@ $(testrfcbibfiles): rfc.bib
 
 publish: rfc.bib
 	if [ -s rfc.bib ]; then \
-	 	cp rfc.bib ../data ;
+	 	cp rfc.bib ../data ; \
 	fi
 
 rfc-index-fl: rfc-index.xml.gz
