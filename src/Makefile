@@ -8,10 +8,12 @@ rfc-index-update:
 	gzip -f -9 rfc-index.xml
 
 rfc-index: rfc-index.xml.gz
-	gunzip -cd  rfc-index.xml.gz | xsltproc rfcxmlindex2bibtex.xslt - | sed -e 's/\([_&%#$$]\)/\\\1/g' \
-	  -e '/author=/s/\([^ ]+[[:space:]]+\(3rd|Jr\.\)\)/{\1}/g' \
-	  -e "s/^\([^\"]*\"[^\"]*\){1}\"\([^\"]*\)\"\([^\"]*\"[^\"]*\){1}$$/\1\`\`\2''\3/g" \
-	  -e "/author=/s/\([^\"]\),/\1 and /g" >rfc.bib
+	gunzip -cd  rfc-index.xml.gz | xsltproc rfcxmlindex2bibtex.xslt - | sed -r \
+	  -e 's/([_&%#$$])/\\\1/g' \
+	  -e '/author=/s/([^ ]+[[:space:]]+(3rd|Jr\.))/{\1}/g' \
+	  -e "s/([^=])\"([^\"]*)\"/\1\`\`\2''/g" \
+	  -e "/author=/s/([^\"]),/\1 and /g" >rfc.bib
+
 #	gunzip -cd  rfc-index.xml.gz | xsltproc rfcxmlindex2bibtex.xslt - | sed -e 's/\([_&%#$$]\)/\\\1/g' -e '/author=/s/\([^ ]*\) \(3rd\|Jr\.\)/\{\1 \2\}/g' -e "/title=\"{.*\".*}\"/s/{\([^\"]*\)\"\([^\"]*\)\"\([^\"]*\)}/{\1\`\`\2\'\'\3}/" >rfc.bib
 
 test: $(testrfcbibfiles)
