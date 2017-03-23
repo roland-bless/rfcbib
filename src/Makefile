@@ -31,13 +31,18 @@ $(testrfcbibfiles): rfc.bib
 publish: rfc.bib
 	if [ -s rfc.bib ]; then \
 	 	cp rfc.bib ../data ; \
+		git commit -m "update RFC index `date -I'date'`" ../data/rfc.bib ; \
+		GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_gitauto -F /dev/null" git push ; \
+	 	cp rfc.bib /tmhome/bless/public_html/ ; \
+		gzip -f -9 -c <rfc.bib >/tmhome/bless/public_html/rfc.bib.gz ; \
 	fi
 
 rfc-index-fl: rfc-index.xml.gz
-	gunzip -cd  rfc-index.xml.gz | xsltproc rfcxmlindex2bibtex-forcelabel.xslt - | sed -e 's/\([_&%#$$]\)/\\\1/g' \
-	  -e '/author=/s/\([^ ]+[[:space:]]+\(3rd|Jr\.\)\)/{\1}/g' \
-	  -e "s/^\([^\"]*\"[^\"]*\){1}\"\([^\"]*\)\"\([^\"]*\"[^\"]*\){1}$$/\1\`\`\2''\3/g" \
-	  -e "/author=/s/\([^\"]\),/\1 and /g" >rfc-fl.bib
+	gunzip -cd  rfc-index.xml.gz | xsltproc rfcxmlindex2bibtex-forcelabel.xslt - | sed -r \
+	  -e 's/([_&%#$$])/\\\1/g' \
+	  -e '/author=/s/([^ ]+[[:space:]]+(3rd|Jr\.))/{\1}/g' \
+	  -e "s/([^=])\"([^\"]*)\"/\1\`\`\2''/g" \
+	  -e "/author=/s/([^\"]),/\1 and /g" >rfc-fl.bib
 #	gunzip -cd  rfc-index.xml.gz | xsltproc rfcxmlindex2bibtex-forcelabel.xslt - | sed -e 's/\([_&%#$$]\)/\\\1/g' -e '/author=/s/\([^ ]*\) \(3rd\|Jr\.\)/\{\1 \2\}/g' -e "/title=\"{.*\".*}\"/s/{\([^\"]*\)\"\([^\"]*\)\"\([^\"]*\)}/{\1\`\`\2\'\'\3}/" -e '/author=/s/[^\"],/ and /g' >rfc-fl.bib
 
 
