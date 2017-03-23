@@ -2,10 +2,8 @@
                xmlns:rfcidx="http://www.rfc-editor.org/rfc-index" >
 <xsl:output method="text"/>
 
-<!-- $Id: rfcxmlindex2bibtex.xslt,v 1.7 2004/12/10 22:47:36 bless Exp $ -->
-
 <!-- rfcxmlindex2bibtex.xslt written by Roland Bless  -->
-<!-- This is my very first xslt script, so please don't blame me for bad coding style -->
+
 <!-- Get rfc-index in xml format from ftp://ftp.isi.edu/in-notes/rfc-index.xml
      then translate it to bibtex format by invoking e.g.: 
      xsltproc  rfcxmlindex2bibtex rfc-index.xml | sed 's/_/\\_/'
@@ -19,12 +17,12 @@
   <xsl:text>@misc</xsl:text>
 </xsl:variable>
 
-<xsl:variable name="rfcname">
+<xsl:variable name="rfctype">
 <xsl:text>RFC</xsl:text>
 </xsl:variable>
 
 <xsl:variable name="urlrfcretrieval">
-<xsl:text>http://www.ietf.org/rfc/</xsl:text>
+<xsl:text>https://www.rfc-editor.org/rfc/</xsl:text>
 </xsl:variable>
 
 <xsl:variable name="obsoletedby">
@@ -78,7 +76,7 @@
 
 <xsl:template match="rfcidx:rfc-entry">
   <xsl:value-of select="$entrytype" /><xsl:text>{rfc</xsl:text>
-  <xsl:variable name="rfcno" select="number(substring-after(rfcidx:doc-id/text(),$rfcname))"/>
+  <xsl:variable name="rfcno" select="number(substring-after(rfcidx:doc-id/text(),$rfctype))"/>
   <xsl:value-of select="$rfcno"/>,
   <xsl:text>author="</xsl:text>
   <xsl:value-of select="rfcidx:author/rfcidx:name"/>
@@ -89,8 +87,6 @@
   </xsl:choose>
   </xsl:for-each>",
   <xsl:apply-templates  select="rfcidx:title" mode="plain"/>,
-  <xsl:text>series="Request for Comments"</xsl:text>,
-  <xsl:text>number="</xsl:text><xsl:value-of select="$rfcno"/>",
   <xsl:text>howpublished="RFC </xsl:text><xsl:value-of select="$rfcno"/>
   <xsl:variable name="rstatus" select="rfcidx:current-status"/>			    
   <xsl:variable name="cstatus">
@@ -110,11 +106,20 @@
   </xsl:choose>
   </xsl:variable>
   <xsl:if test="not(rfcidx:current-status='UNKNOWN')"> (<xsl:value-of select="$cstatus"/>)</xsl:if>",
-  <xsl:text>publisher="IETF"</xsl:text>,
-  <xsl:text>organization="Internet Engineering Task Force"</xsl:text>,
+  <xsl:text>series="Internet Request for Comments"</xsl:text>,
+  <xsl:text>type="</xsl:text><xsl:value-of select="$rfctype"/>",
+  <xsl:text>number="</xsl:text><xsl:value-of select="$rfcno"/>",
+  <xsl:if test="rfcidx:format/rfcidx:page-count">
+    <xsl:text>pages="1--</xsl:text><xsl:value-of select="rfcidx:format/rfcidx:page-count"/>",
+  </xsl:if>
   <xsl:text>year=</xsl:text><xsl:value-of select="rfcidx:date/rfcidx:year"/>,
   <xsl:text>month=</xsl:text><xsl:value-of select="translate(substring(rfcidx:date/rfcidx:month,1,3),'ABCDEFGHIJKMLNOPQRSTUVWXYZ','abcdefghijkmlnopqrstuvwxyz')"/>,
   <xsl:apply-templates  select="rfcidx:date/rfcidx:day"/>
+  <xsl:text>issn="2070-1721"</xsl:text>,
+  <xsl:text>publisher="RFC Editor"</xsl:text>,
+  <xsl:text>institution="RFC Editor"</xsl:text>,
+  <xsl:text>organization="RFC Editor"</xsl:text>,
+  <xsl:text>address="Fremont, CA, USA"</xsl:text>,
   <xsl:if test="count(rfcidx:obsoleted-by|rfcidx:updated-by) &gt; 0">
   <xsl:text>  note="</xsl:text>
   </xsl:if>
@@ -129,7 +134,25 @@
   <xsl:apply-templates  select="rfcidx:updated-by"/>
   </xsl:if>
   <xsl:if test="count(rfcidx:obsoleted-by|rfcidx:updated-by) &gt; 0"><xsl:text>",</xsl:text><xsl:value-of select="$newline"/></xsl:if>
-  <xsl:text>  url="</xsl:text><xsl:value-of select="$urlrfcretrieval"/><xsl:text>rfc</xsl:text><xsl:value-of select="$rfcno"/>.txt",
+  <xsl:text>url="</xsl:text><xsl:value-of select="$urlrfcretrieval"/><xsl:text>rfc</xsl:text><xsl:value-of select="$rfcno"/>.txt",
+  <xsl:text>key="</xsl:text><xsl:value-of select="$rfctype"/><xsl:text> </xsl:text><xsl:value-of select="$rfcno"/>",
+  <xsl:if test="rfcidx:abstract">
+    <xsl:text>abstract={</xsl:text><xsl:value-of select="rfcidx:abstract"/>},
+  </xsl:if>
+  <xsl:if test="rfcidx:keywords">
+    <xsl:text>keywords="</xsl:text>
+    <xsl:value-of select="rfcidx:keywords/rfcidx:kw"/>
+    <xsl:for-each select="rfcidx:keywords/rfcidx:kw">
+      <xsl:choose>
+	<xsl:when test="position()=1"><xsl:value-of select="rfcidx:keywoards/rfcidx:kw"/></xsl:when>
+	<xsl:when test="position()>1"><xsl:text>, </xsl:text><xsl:value-of select="."/></xsl:when>
+      </xsl:choose>
+    </xsl:for-each>",
+  </xsl:if>
+  <xsl:if test="rfcidx:doi">
+    <xsl:text>doi="</xsl:text>
+    <xsl:value-of select="rfcidx:doi"/>",
+  </xsl:if>  
 <xsl:text>}</xsl:text><xsl:value-of select="$newline"/>
 <xsl:value-of select="$newline"/>
 </xsl:template>
@@ -214,8 +237,8 @@
   <xsl:text>RFC</xsl:text><xsl:if test="count(rfcidx:doc-id) &gt; 1">s</xsl:if><xsl:text> </xsl:text>
   <xsl:for-each select="rfcidx:doc-id">
   <xsl:choose>
-   <xsl:when test="position()=1"><xsl:value-of select="number(substring-after(text(),$rfcname))"/></xsl:when>
-   <xsl:when test="position()>1"><xsl:text>, </xsl:text><xsl:value-of select="number(substring-after(text(),$rfcname))"/></xsl:when>
+   <xsl:when test="position()=1"><xsl:value-of select="number(substring-after(text(),$rfctype))"/></xsl:when>
+   <xsl:when test="position()>1"><xsl:text>, </xsl:text><xsl:value-of select="number(substring-after(text(),$rfctype))"/></xsl:when>
   </xsl:choose>
   </xsl:for-each>
 </xsl:template>
@@ -224,8 +247,8 @@
   <xsl:text>RFC</xsl:text><xsl:if test="count(rfcidx:doc-id) &gt; 1">s</xsl:if><xsl:text> </xsl:text>
   <xsl:for-each select="rfcidx:doc-id">
   <xsl:choose>
-   <xsl:when test="position()=1"><xsl:value-of select="number(substring-after(text(),$rfcname))"/></xsl:when>
-   <xsl:when test="position()>1"><xsl:text>, </xsl:text><xsl:value-of select="number(substring-after(text(),$rfcname))"/></xsl:when>
+   <xsl:when test="position()=1"><xsl:value-of select="number(substring-after(text(),$rfctype))"/></xsl:when>
+   <xsl:when test="position()>1"><xsl:text>, </xsl:text><xsl:value-of select="number(substring-after(text(),$rfctype))"/></xsl:when>
   </xsl:choose>
   </xsl:for-each>
 </xsl:template>
