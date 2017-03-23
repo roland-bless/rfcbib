@@ -35,7 +35,7 @@
 <xsl:text>Updated by </xsl:text>
 </xsl:variable>
 
-<xsl:variable name="statFS">STANDARD</xsl:variable>
+<xsl:variable name="statFS">INTERNET STANDARD</xsl:variable>
 <xsl:variable name="statDS">DRAFT STANDARD</xsl:variable>
 <xsl:variable name="statPS">PROPOSED STANDARD</xsl:variable>
 <xsl:variable name="statU">UNKNOWN</xsl:variable>
@@ -45,7 +45,7 @@
 <xsl:variable name="statH">HISTORIC</xsl:variable>
 <xsl:variable name="statI">INFORMATIONAL</xsl:variable>
 
-<xsl:variable name="lstatFS">Standard</xsl:variable>
+<xsl:variable name="lstatFS">Internet Standard</xsl:variable>
 <xsl:variable name="lstatDS">Draft Standard</xsl:variable>
 <xsl:variable name="lstatPS">Proposed Standard</xsl:variable>
 <xsl:variable name="lstatU">Unknown</xsl:variable>
