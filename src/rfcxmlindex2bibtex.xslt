@@ -79,12 +79,10 @@
   <xsl:variable name="rfcno" select="number(substring-after(rfcidx:doc-id/text(),$rfctype))"/>
   <xsl:value-of select="$rfcno"/>,
   <xsl:text>author="</xsl:text>
-  <xsl:value-of select="rfcidx:author/rfcidx:name"/>
-  <xsl:for-each select="rfcidx:author/rfcidx:name">
-  <xsl:choose>
-   <xsl:when test="position()=1"><xsl:value-of select="rfcidx:author/rfcidx:name"/></xsl:when>
-   <xsl:when test="position()>1"><xsl:text> and </xsl:text><xsl:value-of select="."/></xsl:when>
-  </xsl:choose>
+  <xsl:for-each select="rfcidx:author">
+    <xsl:if test="position()>1"><xsl:text> and </xsl:text></xsl:if>
+    <xsl:value-of select="rfcidx:name"/>
+    <xsl:if test="rfcidx:title='Editor'"><xsl:text> {(Ed.)}</xsl:text></xsl:if>
   </xsl:for-each>",
   <xsl:apply-templates  select="rfcidx:title" mode="plain"/>,
   <xsl:text>howpublished="RFC </xsl:text><xsl:value-of select="$rfcno"/>
@@ -144,7 +142,7 @@
     <xsl:value-of select="rfcidx:keywords/rfcidx:kw"/>
     <xsl:for-each select="rfcidx:keywords/rfcidx:kw">
       <xsl:choose>
-	<xsl:when test="position()=1"><xsl:value-of select="rfcidx:keywoards/rfcidx:kw"/></xsl:when>
+	<xsl:when test="position()=1"><xsl:value-of select="rfcidx:keywords/rfcidx:kw"/></xsl:when>
 	<xsl:when test="position()>1"><xsl:text>, </xsl:text><xsl:value-of select="."/></xsl:when>
       </xsl:choose>
     </xsl:for-each>",
