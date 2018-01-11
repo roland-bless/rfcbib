@@ -82,7 +82,7 @@
   <xsl:for-each select="rfcidx:author">
     <xsl:if test="position()>1"><xsl:text> and </xsl:text></xsl:if>
     <xsl:value-of select="rfcidx:name"/>
-    <xsl:if test="rfcidx:title='Editor'"><xsl:text> {(Ed.)}</xsl:text></xsl:if>
+    <xsl:if test="rfcidx:title='Editor'"><xsl:text> (Ed.)</xsl:text></xsl:if>
   </xsl:for-each>",
   <xsl:apply-templates  select="rfcidx:title" mode="plain"/>,
   <xsl:text>howpublished="RFC </xsl:text><xsl:value-of select="$rfcno"/>
