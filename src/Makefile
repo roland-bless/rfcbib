@@ -9,10 +9,12 @@ rfc-index-update:
 
 rfc-index: rfc-index.xml.gz
 	gunzip -cd  rfc-index.xml.gz | xsltproc rfcxmlindex2bibtex.xslt - | sed -r \
-	  -e 's/([_&%#$$])/\\\1/g' \
-	  -e '/author=/s/([^ ]+[[:space:]]+(\(Ed.\)|3rd|Jr\.))/{\1}/g' \
-	  -e "s/([^=])\"([^\"]*)\"/\1\`\`\2''/g" \
-	  -e "/author=/s/([^\"]),/\1 and /g" >rfc.bib
+	  -e 's/([_&%#$$])/\\\1/g # escape special TeX chars'  \
+	  -e '/author=/s/([^ ]+[[:space:]]+(\(Ed.\)|3rd|Jr\.))/{\1}/g # correctly group surname extensions' \
+	  -e "s/([^=])\"([^\"]*)\"/\1\`\`\2''/g # need to replace double quotes to TeX quotes in fields"  \
+	  -e "/author=/s/([^\"]),/\1 and /g # special fix for excessive author list in single author field Y.Xu,S.Baba,T.Ayaki,T.Seki,A.Hameed" \
+		>rfc.bib
+
 
 #	gunzip -cd  rfc-index.xml.gz | xsltproc rfcxmlindex2bibtex.xslt - | sed -e 's/\([_&%#$$]\)/\\\1/g' -e '/author=/s/\([^ ]*\) \(3rd\|Jr\.\)/\{\1 \2\}/g' -e "/title=\"{.*\".*}\"/s/{\([^\"]*\)\"\([^\"]*\)\"\([^\"]*\)}/{\1\`\`\2\'\'\3}/" >rfc.bib
 
