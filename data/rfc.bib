@@ -75509,7 +75509,7 @@ url="https://www.rfc-editor.org/rfc/rfc3703.txt",
 url="https://www.rfc-editor.org/rfc/rfc3704.txt",
   key="RFC 3704",
   abstract={BCP 38, RFC 2827, is designed to limit the impact of distributed denial of service attacks, by denying traffic with spoofed addresses access to the network, and to help ensure that traffic is traceable to its correct source network.  As a side effect of protecting the Internet against such attacks, the network implementing the solution also protects itself from this and other attacks, such as spoofed management access to networking equipment.  There are cases when this may create problems, e.g., with multihoming.  This document describes the current ingress filtering operational mechanisms, examines generic issues related to ingress filtering, and delves into the effects on multihoming in particular.  This memo updates RFC 2827.  This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.},
-  keywords="ISP, Internet Service Provider, Internet Protocol, DOS",
+  keywords="ISP, Internet Service Provider, Internet Protocol, DOS, Denial of Service",
   doi="10.17487/RFC3704",
   }
 
@@ -76039,7 +76039,7 @@ url="https://www.rfc-editor.org/rfc/rfc3723.txt",
   url="https://www.rfc-editor.org/rfc/rfc3729.txt",
   key="RFC 3729",
   abstract={This memo defines a portion of the Management Information Base (MIB) for use with network management protocols in TCP/IP-based internets.  In particular, it defines objects for measuring the application performance as experienced by end-users. [STANDARDS-TRACK]},
-  keywords="",
+  keywords="MIB, Management Information Base, application performance",
   doi="10.17487/RFC3729",
   }
 
@@ -76191,7 +76191,7 @@ url="https://www.rfc-editor.org/rfc/rfc3734.txt",
 url="https://www.rfc-editor.org/rfc/rfc3736.txt",
   key="RFC 3736",
   abstract={Stateless Dynamic Host Configuration Protocol service for IPv6 (DHCPv6) is used by nodes to obtain configuration information, such as the addresses of DNS recursive name servers, that does not require the maintenance of any dynamic state for individual clients.  A node that uses stateless DHCP must have obtained its IPv6 addresses through some other mechanism, typically stateless address autoconfiguration.  This document explains which parts of RFC 3315 must be implemented in each of the different kinds of DHCP agents so that agent can support stateless DHCP. [STANDARDS-TRACK]},
-  keywords="",
+  keywords="DHCP, Dynamic Host Configuration Protocol, IPv6",
   doi="10.17487/RFC3736",
   }
 
@@ -76212,7 +76212,7 @@ url="https://www.rfc-editor.org/rfc/rfc3736.txt",
   url="https://www.rfc-editor.org/rfc/rfc3737.txt",
   key="RFC 3737",
   abstract={This document defines the procedures for IANA to administer and maintain the Object Identifier (OID) tree under the Remote Monitoring (rmon) root.  This memo also documents the currently assigned values. [STANDARDS-TRACK]},
-  keywords="management information base, internet assigned numbers authority",
+  keywords="MIB, Management Information Base, IANA, Internet Assigned Numbers Authority, RMON, Registry of Remote Monitoring",
   doi="10.17487/RFC3737",
   }
 
@@ -76233,7 +76233,7 @@ url="https://www.rfc-editor.org/rfc/rfc3736.txt",
   url="https://www.rfc-editor.org/rfc/rfc3738.txt",
   key="RFC 3738",
   abstract={This document specifies Wave and Equation Based Rate Control (WEBRC), which provides rate and congestion control for data delivery.  WEBRC is specifically designed to support protocols using IP multicast.  It provides multiple-rate, congestion-controlled delivery to receivers, i.e., different receivers joined to the same session may be receiving packets at different rates depending on the bandwidths of their individual connections to the sender and on competing traffic along these connections.  WEBRC requires no feedback from receivers to the sender, i.e., it is a completely receiver-driven congestion control protocol.  Thus, it is designed to scale to potentially massive numbers of receivers attached to a session from a single sender.  Furthermore, because each individual receiver adjusts to the available bandwidth between the sender and that receiver, there is the potential to deliver data to each individual receiver at the fastest possible rate for that receiver, even in a highly heterogeneous network architecture, using a single sender.  This memo defines an Experimental Protocol for the Internet community.},
-  keywords="congestion control, data delivery, multicast, ip, internet protocol",
+  keywords="WEBRC, Wave and Equation Based Rate Control, congestion control, data delivery, multicast, ip, internet protocol",
   doi="10.17487/RFC3738",
   }
 
@@ -76254,7 +76254,7 @@ url="https://www.rfc-editor.org/rfc/rfc3736.txt",
   url="https://www.rfc-editor.org/rfc/rfc3739.txt",
   key="RFC 3739",
   abstract={This document forms a certificate profile, based on RFC 3280, for identity certificates issued to natural persons.  The profile defines specific conventions for certificates that are qualified within a defined legal framework, named Qualified Certificates.  However, the profile does not define any legal requirements for such Qualified Certificates.  The goal of this document is to define a certificate profile that supports the issuance of Qualified Certificates independent of local legal requirements.  The profile is however not limited to Qualified Certificates and further profiling may facilitate specific local needs. [STANDARDS-TRACK]},
-  keywords="syntax",
+  keywords="X.509, Public Key Infrastructure, syntax",
   doi="10.17487/RFC3739",
   }
 
@@ -76317,7 +76317,7 @@ url="https://www.rfc-editor.org/rfc/rfc3736.txt",
   url="https://www.rfc-editor.org/rfc/rfc3742.txt",
   key="RFC 3742",
   abstract={This document describes an optional modification for TCP's slow-start for use with TCP connections with large congestion windows.  For TCP connections that are able to use congestion windows of thousands (or tens of thousands) of MSS-sized segments (for MSS the sender's MAXIMUM SEGMENT SIZE), the current slow-start procedure can result in increasing the congestion window by thousands of segments in a single round-trip time.  Such an increase can easily result in thousands of packets being dropped in one round-trip time.  This is often counter-productive for the TCP flow itself, and is also hard on the rest of the traffic sharing the congested link.  This note describes Limited Slow-Start as an optional mechanism for limiting the number of segments by which the congestion window is increased for one window of data during slow-start, in order to improve performance for TCP connections with large congestion windows.  This memo defines an Experimental Protocol for the Internet community.},
-  keywords="transmission control protocol",
+  keywords="TCP, transmission control protocol, congestion",
   doi="10.17487/RFC3742",
   }
 
@@ -76358,7 +76358,7 @@ url="https://www.rfc-editor.org/rfc/rfc3736.txt",
   url="https://www.rfc-editor.org/rfc/rfc3744.txt",
   key="RFC 3744",
   abstract={This document specifies a set of methods, headers, message bodies, properties, and reports that define Access Control extensions to the WebDAV Distributed Authoring Protocol.  This protocol permits a client to read and modify access control lists that instruct a server whether to allow or deny operations upon a resource (such as HyperText Transfer Protocol (HTTP) method invocations) by a given principal.  A lightweight representation of principals as Web resources supports integration of a wide range of user management repositories.  Search operations allow discovery and manipulation of principals using human names. [STANDARDS-TRACK]},
-  keywords="",
+  keywords="WebDAV, Web Distributed Authoring and Versioning, Access Control",
   doi="10.17487/RFC3744",
   }
 
@@ -76379,7 +76379,7 @@ url="https://www.rfc-editor.org/rfc/rfc3736.txt",
   url="https://www.rfc-editor.org/rfc/rfc3745.txt",
   key="RFC 3745",
   abstract={This document serves to register and document the standard MIME types associated with the ISO/IEC 15444 standards, commonly known as JPEG 2000 (Joint Photographic Experts Group). [STANDARDS-TRACK]},
-  keywords="multipurpose internet mail extensions, joint photographic experts group",
+  keywords="MIME, multipurpose internet mail extensions, JPEG, joint photographic experts group",
   doi="10.17487/RFC3745",
   }
 
@@ -76421,7 +76421,7 @@ url="https://www.rfc-editor.org/rfc/rfc3736.txt",
   url="https://www.rfc-editor.org/rfc/rfc3747.txt",
   key="RFC 3747",
   abstract={This memo describes a MIB module that provides a conceptual layer between high-level ``network-wide'' policy definitions that effect configuration of the Differentiated Services (diffserv) subsystem and the instance-specific information that would include such details as the parameters for all the queues associated with each interface in a system.  This essentially provides an interface for configuring differentiated services at a conceptually higher layer than that of the Differentiated Services MIB. [PROPOSED STANDARD]},
-  keywords="management information base, diffserv",
+  keywords="MIB, management information base, diffserv, differentiated services",
   doi="10.17487/RFC3747",
   }
 
@@ -76443,7 +76443,7 @@ url="https://www.rfc-editor.org/rfc/rfc3736.txt",
 url="https://www.rfc-editor.org/rfc/rfc3748.txt",
   key="RFC 3748",
   abstract={This document defines the Extensible Authentication Protocol (EAP), an authentication framework which supports multiple authentication methods.  EAP typically runs directly over data link layers such as Point-to-Point Protocol (PPP) or IEEE 802, without requiring IP.  EAP provides its own support for duplicate elimination and retransmission, but is reliant on lower layer ordering guarantees.  Fragmentation is not supported within EAP itself; however, individual EAP methods may support this.  This document obsoletes RFC 2284.  A summary of the changes between this document and RFC 2284 is available in Appendix A. [STANDARDS-TRACK]},
-  keywords="PPP-EAP, data link layers, ppp, point-to-point, ieee 802",
+  keywords="PPP-EAP, Extensible Authentication Protocol, data link layers, point-to-point, ieee 802",
   doi="10.17487/RFC3748",
   }
 
@@ -76465,7 +76465,7 @@ url="https://www.rfc-editor.org/rfc/rfc3748.txt",
 url="https://www.rfc-editor.org/rfc/rfc3749.txt",
   key="RFC 3749",
   abstract={The Transport Layer Security (TLS) protocol (RFC 2246) includes features to negotiate selection of a lossless data compression method as part of the TLS Handshake Protocol and to then apply the algorithm associated with the selected method as part of the TLS Record Protocol.  TLS defines one standard compression method which specifies that data exchanged via the record protocol will not be compressed.  This document describes an additional compression method associated with a lossless data compression algorithm for use with TLS, and it describes a method for the specification of additional TLS compression methods. [STANDARDS-TRACK]},
-  keywords="tls, lossless data compression, handshake protocol",
+  keywords="TLS, Transport Layer Security, lossless data compression, handshake protocol",
   doi="10.17487/RFC3749",
   }
 
@@ -76656,7 +76656,7 @@ url="https://www.rfc-editor.org/rfc/rfc3757.txt",
   url="https://www.rfc-editor.org/rfc/rfc3758.txt",
   key="RFC 3758",
   abstract={This memo describes an extension to the Stream Control Transmission Protocol (SCTP) that allows an SCTP endpoint to signal to its peer that it should move the cumulative ack point forward.  When both sides of an SCTP association support this extension, it can be used by an SCTP implementation to provide partially reliable data transmission service to an upper layer protocol.  This memo describes the protocol extensions, which consist of a new parameter for INIT and INIT ACK, and a new FORWARD TSN chunk type, and provides one example of a partially reliable service that can be provided to the upper layer via this mechanism. [STANDARDS-TRACK]},
-  keywords="init, init ack, forward tsn",
+  keywords="SCTP, Stream Control Transmission Protocol, init, init ack, forward tsn",
   doi="10.17487/RFC3758",
   }
 
@@ -76719,7 +76719,7 @@ url="https://www.rfc-editor.org/rfc/rfc3757.txt",
 url="https://www.rfc-editor.org/rfc/rfc3761.txt",
   key="RFC 3761",
   abstract={This document discusses the use of the Domain Name System (DNS) for storage of E.164 numbers.  More specifically, how DNS can be used for identifying available services connected to one E.164 number.  It specifically obsoletes RFC 2916 to bring it in line with the Dynamic Delegation Discovery System (DDDS) Application specification found in the document series specified in RFC 3401.  It is very important to note that it is impossible to read and understand this document without reading the documents discussed in RFC 3401. [STANDARDS-TRACK]},
-  keywords="domain name system",
+  keywords="E.164, URI, Uniform Resource Identifier, DDDS, Dynamic Delegation Discovery System, DNS, domain name system",
   doi="10.17487/RFC3761",
   }
 
@@ -76741,7 +76741,7 @@ url="https://www.rfc-editor.org/rfc/rfc3761.txt",
 url="https://www.rfc-editor.org/rfc/rfc3762.txt",
   key="RFC 3762",
   abstract={The H.323 specification defines a means for building multimedia communication services over an arbitrary Packet Based Network, including the Internet.  This document registers a Telephone Number Mapping (ENUM) service for H.323 according to specifications and guidelines in RFC 3761. [STANDARDS-TRACK]},
-  keywords="multimedia, packet based network",
+  keywords="ENUM, Telephone Number Mapping, multimedia, packet based network",
   doi="10.17487/RFC3762",
   }
 
@@ -76784,7 +76784,7 @@ url="https://www.rfc-editor.org/rfc/rfc3762.txt",
 url="https://www.rfc-editor.org/rfc/rfc3764.txt",
   key="RFC 3764",
   abstract={This document registers an Electronic Number (ENUM) service for the Session Initiation Protocol (SIP), pursuant to the guidelines in RFC 3761.  Specifically, this document focuses on provisioning SIP addresses-of-record in ENUM. [STANDARDS-TRACK]},
-  keywords="aor, electronic number",
+  keywords="SIP, Session Initiation Protocol, aor, Addresses-of-Record, electronic number, ENUM",
   doi="10.17487/RFC3764",
   }
 
