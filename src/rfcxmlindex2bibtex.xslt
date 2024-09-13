@@ -1,5 +1,5 @@
 <xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" 
-               xmlns:rfcidx="http://www.rfc-editor.org/rfc-index" >
+               xmlns:rfcidx="https://www.rfc-editor.org/rfc-index" >
 <xsl:output method="text"/>
 
 <!-- rfcxmlindex2bibtex.xslt written by Roland Bless  -->
