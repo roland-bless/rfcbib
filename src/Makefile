@@ -38,6 +38,9 @@ publish: rfc.bib
 		GIT_SSH_COMMAND="ssh -i ~/.ssh/id_ed25519_gitauto -F /dev/null" git push ; \
 	 	cp rfc.bib /tmhome/bless/public_html/ ; \
 		gzip -f -9 -c <rfc.bib >/tmhome/bless/public_html/rfc.bib.gz ; \
+	else \
+		echo "rfc.bib is empty, maybe xsltproc failed"; \
+		exit 1; \
 	fi
 
 rfc-index-fl: rfc-index.xml.gz
