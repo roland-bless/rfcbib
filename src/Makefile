@@ -4,7 +4,8 @@ testrfcbibfiles= testrfcbib-1.tex testrfcbib-2.tex
 update: rfc-index-update rfc-index test publish
 
 rfc-index-update:
-	ncftpget ftp://ftp.rfc-editor.org/in-notes/rfc-index.xml
+	wget -O - https://www.rfc-editor.org/rfc-index.xml >rfc-index.xml
+        #ncftpget ftp://ftp.rfc-editor.org/in-notes/rfc-index.xml
 	gzip -f -9 rfc-index.xml
 
 rfc-index: rfc-index.xml.gz
@@ -34,7 +35,7 @@ publish: rfc.bib
 	if [ -s rfc.bib ]; then \
 	 	cp rfc.bib ../data ; \
 		git commit -m "update RFC index `date -I'date'`" ../data/rfc.bib ; \
-		GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_gitauto -F /dev/null" git push ; \
+		GIT_SSH_COMMAND="ssh -i ~/.ssh/id_ed25519_gitauto -F /dev/null" git push ; \
 	 	cp rfc.bib /tmhome/bless/public_html/ ; \
 		gzip -f -9 -c <rfc.bib >/tmhome/bless/public_html/rfc.bib.gz ; \
 	fi
