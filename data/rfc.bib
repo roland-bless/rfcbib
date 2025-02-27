@@ -199131,6 +199131,38 @@ issn="2070-1721",
   doi="10.17487/RFC9706",
   }
 
+@misc{rfc9707,
+  author="M. Kühlewind and D. Dhody and M. Knodel",
+  title="{Report from the IAB Workshop on Barriers to Internet Access of Services (BIAS)}",
+  howpublished="RFC 9707 (Informational)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9707",
+  year=2025,
+  month=feb,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9707.txt",
+  key="RFC 9707",
+  abstract={The ``Barriers to Internet Access of Services (BIAS)'' workshop was
+convened by the Internet Architecture Board (IAB) from January 15-17,
+2024 as a three-day online meeting. Based on the submitted position
+papers, the workshop covered three areas of interest: the role of
+Community Networks in Internet access of services, reports and
+comments on the observed digital divide, and measurements of
+censorship and censorship circumvention. This report summarizes the
+workshop's discussions and serves as a reference for reports on the
+current barriers to Internet access. Note that this document is a report on the proceedings of the
+workshop. The views and positions documented in this report were
+expressed during the workshop by participants and do not necessarily
+reflect the IAB's views and positions.},
+  keywords="Internet Access, Censorship, Community Networks, digital divide",
+  doi="10.17487/RFC9707",
+  }
+
 @misc{rfc9708,
   author="R. Housley",
   title="{Use of the HSS/LMS Hash-Based Signature Algorithm in the Cryptographic Message Syntax (CMS)}",
@@ -199424,5 +199456,26 @@ traffic.},
   key="RFC 9735",
   abstract={This document defines how to use the Address Family Identifier (AFI) 17 ``Distinguished Name'' in the Locator/ID Separation Protocol (LISP).  LISP introduces two new numbering spaces: Endpoint Identifiers (EIDs) and Routing Locators (RLOCs).  Distinguished Names (DNs) can be used in either EID-Records or RLOC-Records in LISP control messages to convey additional information.},
   doi="10.17487/RFC9735",
+  }
+
+@misc{rfc9737,
+  author="T. Haynes and T. Myklebust",
+  title="{Reporting Errors in NFSv4.2 via LAYOUTRETURN}",
+  howpublished="RFC 9737 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9737",
+  year=2025,
+  month=feb,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9737.txt",
+  key="RFC 9737",
+  abstract={The Parallel Network File System (pNFS) allows for a file's metadata and data to be on different servers (i.e., the metadata server (MDS) and the data server (DS)).  When the MDS is restarted, the client can still modify the data file component.  During the recovery phase of startup, the MDS and the DSs work together to recover state.  If the client has not encountered errors with the data files, then the state can be recovered and the resilvering of the data files can be avoided.  With any errors, there is no means by which the client can report errors to the MDS.  As such, the MDS has to assume that a file needs resilvering.  This document presents an extension to RFC 8435 to allow the client to update the metadata via LAYOUTRETURN and avoid the resilvering.},
+  keywords="NFSv4",
+  doi="10.17487/RFC9737",
   }
 
