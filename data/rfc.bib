@@ -164666,7 +164666,7 @@ url="https://www.rfc-editor.org/rfc/rfc7343.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-    note="Updated by RFCs 8078, 9615",
+    note="Updated by RFCs 8078, 9615, 9975",
 url="https://www.rfc-editor.org/rfc/rfc7344.txt",
   key="RFC 7344",
   abstract={
@@ -167725,7 +167725,8 @@ url="https://www.rfc-editor.org/rfc/rfc7473.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-  url="https://www.rfc-editor.org/rfc/rfc7477.txt",
+    note="Updated by RFC 9975",
+url="https://www.rfc-editor.org/rfc/rfc7477.txt",
   key="RFC 7477",
   abstract={
       This document specifies how a child zone in the DNS can publish a record to indicate to a parental agent that the parental agent may copy and process certain records from the child zone.  The existence of the record and any change in its value can be monitored by a parental agent and acted on depending on local policy.
@@ -225050,6 +225051,28 @@ implementations to interoperate with each other.
   doi="10.17487/RFC9965",
   }
 
+@misc{rfc9966,
+  author="O. Friel and D. Harkins",
+  title="{Bootstrapped TLS Authentication with Proof of Knowledge}",
+  howpublished="RFC 9966 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9966",
+  year=2026,
+  month=may,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9966.txt",
+  key="RFC 9966",
+  abstract={
+      This document defines a mechanism that enables a bootstrapping device to establish trust and mutually authenticate against a TLS server. Bootstrapping devices have a public/private key pair; this mechanism enables a TLS server to prove to the device that it knows the public key and enables the device to prove to the TLS server that it knows the private key. The mechanism leverages existing Device Provisioning Profile (DPP) and TLS standards and can be used in an Extensible Authentication Protocol (EAP) exchange with an EAP server.
+    },
+  doi="10.17487/RFC9966",
+  }
+
 @misc{rfc9967,
   author="P. {Hunt (Ed.)} and N. Cam-Winget and M. Kiser and J. Schreiber",
   title="{System for Cross-Domain Identity Management (SCIM) Profile for Security Event Tokens (SETs)}",
@@ -225143,6 +225166,31 @@ implementations to interoperate with each other.
     },
   keywords="IDR, GROW, BGP, BMP",
   doi="10.17487/RFC9972",
+  }
+
+@misc{rfc9975,
+  author="P. Thomassen",
+  title="{Clarifications on CDS/CDNSKEY and CSYNC Consistency}",
+  howpublished="RFC 9975 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9975",
+  year=2026,
+  month=may,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9975.txt",
+  key="RFC 9975",
+  abstract={
+      Maintenance of DNS delegations requires occasional changes of the DS and NS record sets on the parent side of the delegation. For the case of DS records, ``Automating DNSSEC Delegation Trust Maintenance'' (RFC 7344) provides automation by allowing the child to publish CDS and/or CDNSKEY records holding the prospective DS parameters that the parent can ingest. Similarly, ``Child-to-Parent Synchronization in DNS'' (RFC 7477) specifies CSYNC records to indicate a desired update of the delegation's NS (and glue) records. Parent-side entities (e.g., Registries and Registrars) can query these records from the child and, after validation, use them to update the parent-side Resource Record Sets (RRsets) of the delegation.
+      This document specifies under which conditions the target states expressed via CDS/CDNSKEY and CSYNC records are considered ``consistent''. Parent-side entities accepting such records from the child have to ensure that update requests retrieved from different authoritative nameservers satisfy these consistency requirements before taking any action based on them.
+      This document updates RFCs 7344 and 7477.
+    },
+  keywords="DNSSEC, DS, CDS, CDNSKEY, CSYNC, automation",
+  doi="10.17487/RFC9975",
   }
 
 @misc{rfc9983,
