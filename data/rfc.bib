@@ -209554,7 +209554,8 @@ url="https://www.rfc-editor.org/rfc/rfc9280.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-  url="https://www.rfc-editor.org/rfc/rfc9286.txt",
+    note="Updated by RFC 9981",
+url="https://www.rfc-editor.org/rfc/rfc9286.txt",
   key="RFC 9286",
   abstract={
       This document defines a ``manifest'' for use in the Resource Public Key Infrastructure (RPKI).  A manifest is a signed object (file) that contains a listing of all the signed objects (files) in the repository publication point (directory) associated with an authority responsible for publishing in the repository.  For each certificate, Certificate Revocation List (CRL), or other type of signed objects issued by the authority that are published at this repository publication point, the manifest contains both the name of the file containing the object and a hash of the file content.  Manifests are intended to enable a relying party (RP) to detect certain forms of attacks against a repository.  Specifically, if an RP checks a manifest's contents against the signed objects retrieved from a repository publication point, then the RP can detect replay attacks, and unauthorized in-flight modification or deletion of signed objects.  This document obsoletes RFC 6486.
@@ -225201,6 +225202,79 @@ implementations to interoperate with each other.
     },
   keywords="DNSSEC, DS, CDS, CDNSKEY, CSYNC, automation",
   doi="10.17487/RFC9975",
+  }
+
+@misc{rfc9977,
+  author="O. Gasser and R. Bush and M. Candela and R. Housley",
+  title="{Publishing End-Site Prefix Lengths}",
+  howpublished="RFC 9977 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9977",
+  year=2026,
+  month=may,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9977.txt",
+  key="RFC 9977",
+  abstract={
+      This document specifies how to augment the Routing Policy Specification Language (RPSL) inetnum: class to refer specifically to prefixlen files, which are Comma-Separated Values (CSV) files used to specify end-site prefix lengths. This document also describes an optional mechanism that uses the Resource Public Key Infrastructure (RPKI) to authenticate the prefixlen files.
+    },
+  keywords="prefix, allocation, RPSL, inetnum",
+  doi="10.17487/RFC9977",
+  }
+
+@misc{rfc9979,
+  author="N. Jenkins and D. Eggert",
+  title="{Registration of Further IMAP/JMAP Keywords and Mailbox Name Attributes}",
+  howpublished="RFC 9979 (Informational)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9979",
+  year=2026,
+  month=may,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9979.txt",
+  key="RFC 9979",
+  abstract={
+      This document defines a number of keywords and mailbox name
+   attributes that have been in use across different server and client
+   implementations.  It defines the intended use of these keywords and
+   mailbox name attributes.  This document registers all of these with
+   IANA to avoid name collisions.
+    },
+  keywords="IMAP, JMAP",
+  doi="10.17487/RFC9979",
+  }
+
+@misc{rfc9981,
+  author="T. Harrison and G. Michaelson and J. Snijders",
+  title="{Resource Public Key Infrastructure (RPKI) Manifest Number Handling}",
+  howpublished="RFC 9981 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9981",
+  year=2026,
+  month=may,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9981.txt",
+  key="RFC 9981",
+  abstract={
+      The Resource Public Key Infrastructure (RPKI) makes use of signed objects called ``manifests'', each of which includes a ``manifest number''. This document updates RFC 9286 by specifying issuer and Relying Party (RP) behaviour when a manifest number reaches the largest possible value, a situation not considered in RFC 9286.
+    },
+  keywords="RPKI, Routing Security, X.509",
+  doi="10.17487/RFC9981",
   }
 
 @misc{rfc9982,
