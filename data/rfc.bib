@@ -219084,7 +219084,8 @@ url="https://www.rfc-editor.org/rfc/rfc9604.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-  url="https://www.rfc-editor.org/rfc/rfc9695.txt",
+    note="Updated by RFC 9993",
+url="https://www.rfc-editor.org/rfc/rfc9695.txt",
   key="RFC 9695",
   abstract={
       This memo registers and documents the 'haptics' top-level media type, under which subtypes for representation formats for haptics may be registered.  This document also serves as a registration for a set of subtypes, which are representative of some existing subtypes already in use.
@@ -225415,5 +225416,28 @@ implementations to interoperate with each other.
     },
   keywords="DMARC, DKIM, SPF, feedback, Email Authentication, Failure report",
   doi="10.17487/RFC9991",
+  }
+
+@misc{rfc9993,
+  author="HS Yang and X. de Foy",
+  title="{RTP Payload Format for Haptics}",
+  howpublished="RFC 9993 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9993",
+  year=2026,
+  month=may,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9993.txt",
+  key="RFC 9993",
+  abstract={
+      This memo specifies an RTP payload format for MPEG-I haptic data. A haptic media stream is composed of MPEG-I Haptic Stream (MIHS) units including a MIHS unit header and zero or more MIHS packets. The RTP payload header format allows for packetization of a MIHS unit in an RTP packet payload as well as fragmentation of a MIHS unit into multiple RTP packets. The original subtype registration for 'haptics/hmpg' (RFC 9695) did not include any required or optional parameters. This memo updates RFC 9695 and the 'haptics/hmpg' registration to add optional parameters. It also provides Session Description Protocol (SDP) usage information for the 'haptics' media type.
+    },
+  keywords="touch, tactile, vibrotactile, kinesthetic",
+  doi="10.17487/RFC9993",
   }
 
