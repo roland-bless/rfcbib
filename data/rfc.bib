@@ -225393,6 +225393,52 @@ implementations to interoperate with each other.
   doi="10.17487/RFC9984",
   }
 
+@misc{rfc9985,
+  author="M. Jethanandani and A. Mishra and J. Haas and A. Saxena and M. Bhatia",
+  title="{Optimizing Bidirectional Forwarding Detection (BFD) Authentication}",
+  howpublished="RFC 9985 (Experimental)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9985",
+  year=2026,
+  month=jun,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9985.txt",
+  key="RFC 9985",
+  abstract={
+      This document describes an experimental optimization to Bidirectional Forwarding Detection (BFD) Authentication. This optimization enables BFD to scale better when there is a desire to use authentication where applying the same authentication mechanism to every BFD Control Packet may adversely impact performance. This optimization partitions BFD Authentication into a more computationally intensive (MCI) mechanism that is applied to BFD significant changes and a less computationally intensive (LCI) mechanism that is applied to the majority of BFD Control Packets.
+    },
+  keywords="BFD, authentication",
+  doi="10.17487/RFC9985",
+  }
+
+@misc{rfc9986,
+  author="A. DeKok and M. Jethanandani and S. Agarwal and A. Mishra and J. Haas",
+  title="{Meticulous Keyed ISAAC for Bidirectional Forwarding Detection (BFD) Optimized Authentication}",
+  howpublished="RFC 9986 (Experimental)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9986",
+  year=2026,
+  month=jun,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9986.txt",
+  key="RFC 9986",
+  abstract={
+      This document describes a Bidirectional Forwarding Detection (BFD) Optimized Authentication Mode known as Meticulous Keyed ISAAC Authentication. This mode can be used to authenticate some BFD packets with less CPU time cost than using MD5 or SHA-1 with the trade-off of decreased security. This mechanism cannot be used to signal state changes, but it can be used to maintain a session in the Up state.
+    },
+  keywords="secure BFD, replay packets, spoofing, pseudo-random number",
+  doi="10.17487/RFC9986",
+  }
+
 @misc{rfc9987,
   author="D. Miller",
   title="{Secure Shell (SSH) Agent Protocol}",
