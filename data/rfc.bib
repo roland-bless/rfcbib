@@ -111964,7 +111964,7 @@ url="https://www.rfc-editor.org/rfc/rfc5018.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-    note="Updated by RFC 8996",
+    note="Obsoleted by RFC 9919, updated by RFC 8996",
 url="https://www.rfc-editor.org/rfc/rfc5019.txt",
   key="RFC 5019",
   abstract={
@@ -170341,7 +170341,8 @@ url="https://www.rfc-editor.org/rfc/rfc7582.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-  url="https://www.rfc-editor.org/rfc/rfc7589.txt",
+    note="Updated by RFC 9918",
+url="https://www.rfc-editor.org/rfc/rfc7589.txt",
   key="RFC 7589",
   abstract={
       The Network Configuration Protocol (NETCONF) provides mechanisms to install, manipulate, and delete the configuration of network devices.  This document describes how to use the Transport Layer Security (TLS) protocol with mutual X.509 authentication to secure the exchange of NETCONF messages.  This revision of RFC 5539 documents the new message framing used by NETCONF 1.1 and it obsoletes RFC 5539.
@@ -185691,7 +185692,8 @@ url="https://www.rfc-editor.org/rfc/rfc8247.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-  url="https://www.rfc-editor.org/rfc/rfc8253.txt",
+    note="Updated by RFC 9916",
+url="https://www.rfc-editor.org/rfc/rfc8253.txt",
   key="RFC 8253",
   abstract={
       The Path Computation Element Communication Protocol (PCEP) defines the mechanisms for the communication between a Path Computation Client (PCC) and a Path Computation Element (PCE), or among PCEs. This document describes PCEPS -- the usage of Transport Layer Security (TLS) to provide a secure transport for PCEP. The additional security mechanisms are provided by the transport protocol supporting PCEP; therefore, they do not affect the flexibility and extensibility of PCEP.
@@ -224156,6 +224158,29 @@ algorithms.
   doi="10.17487/RFC9915",
   }
 
+@misc{rfc9916,
+  author="D. Dhody and S. Turner and R. Housley",
+  title="{Updates to the Usage of TLS to Provide a Secure Transport for the Path Computation Element Communication Protocol (PCEP)}",
+  howpublished="RFC 9916 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9916",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9916.txt",
+  key="RFC 9916",
+  abstract={
+      Section 3.4 of RFC 8253 specifies TLS connection establishment restrictions for PCEPS; PCEPS refers to usage of TLS to provide a secure transport for the Path Computation Element Communication Protocol (PCEP). This document adds restrictions to specify what PCEPS implementations do if they support more than one version of the TLS protocol and to restrict the use of TLS 1.3's early data.
+    },
+  keywords="PCEP, PCEPS, TLS 1.3, TLS 1.2, Early Data, 0-RTT",
+  doi="10.17487/RFC9916",
+  }
+
 @misc{rfc9917,
   author="P. Psenak and J. Horn and A. Dhamija",
   title="{IGP Flexible Algorithms Reverse Affinity Constraint}",
@@ -224177,6 +224202,61 @@ algorithms.
       This document updates RFCs 9350 and 9843 by introducing the new IANA registry that specifies the ordered set of rules that are used to prune links from the topology during the Flex-Algorithm path computation.
     },
   doi="10.17487/RFC9917",
+  }
+
+@misc{rfc9918,
+  author="S. Turner and R. Housley",
+  title="{Updates to Using the NETCONF Protocol over Transport Layer Security (TLS) with Mutual X.509 Authentication}",
+  howpublished="RFC 9918 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9918",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9918.txt",
+  key="RFC 9918",
+  abstract={
+      RFC 7589 defines how to protect Network Configuration Protocol (NETCONF) messages with TLS 1.2. This document updates RFC 7589 to update support requirements for TLS 1.2 and add TLS 1.3 support requirements, including restrictions on the use of TLS 1.3's early data.
+    },
+  keywords="NETCONF, TLS 1.3, TLS 1.2, Early Data",
+  doi="10.17487/RFC9918",
+  }
+
+@misc{rfc9919,
+  author="T. Ito and C. Wilson and C. Bonnell and S. Turner",
+  title="{The Lightweight Online Certificate Status Protocol (OCSP) Profile for High-Volume Environments}",
+  howpublished="RFC 9919 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9919",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9919.txt",
+  key="RFC 9919",
+  abstract={
+      This specification defines a profile of the Online Certificate Status
+   Protocol (OCSP) that addresses the scalability issues inherent when
+   using OCSP in large scale (high volume) Public Key Infrastructure
+   (PKI) environments and/or in PKI environments that require a
+   lightweight solution to minimize communication bandwidth and client-
+   side processing.
+
+   This specification obsoletes RFC 5019.  The profile specified in RFC
+   5019 has been updated to allow and recommend the use of SHA-256 over
+   SHA-1.
+    },
+  keywords="Revocation",
+  doi="10.17487/RFC9919",
   }
 
 @misc{rfc9920,
@@ -225815,6 +225895,32 @@ implementations to interoperate with each other.
     },
   keywords="IAB workshop, age gate",
   doi="10.17487/RFC9998",
+  }
+
+@misc{rfc9999,
+  author="H. Birkholz and N. Smith and T. Fossati and H. Tschofenig",
+  title="{Remote ATtestation procedureS (RATS) Conceptual Message Wrapper (CMW)}",
+  howpublished="RFC 9999 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9999",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9999.txt",
+  key="RFC 9999",
+  abstract={
+      The conceptual messages introduced by the Remote ATtestation procedureS (RATS) architecture (RFC 9334) are protocol-agnostic data units that are conveyed between RATS roles during RATS interactions. Conceptual messages describe the meaning and function of such data units within RATS data flows without specifying a wire format, encoding, transport mechanism, or processing details. The initial set of conceptual messages is defined in Section 8 of RFC 9334 and includes Evidence, Attestation Results, Endorsements, Reference Values, and Appraisal Policies.
+      This document introduces the Conceptual Message Wrapper (CMW) that provides a common structure to encapsulate these messages. It defines a dedicated Concise Binary Object Representation (CBOR) tag, corresponding JSON Web Token (JWT) and CBOR Web Token (CWT) claims, and an X.509 extension.
+      Together, these mechanisms allow CMWs to be used in CBOR-based protocols, web APIs using JWTs and CWTs, and PKIX artifacts such as X.509 certificates. Additionally, this document defines media types and CoAP Content-Formats that may be used to identify CMWs when transported over protocols such as HTTP, MIME, and CoAP.
+      The goal is to improve the interoperability and flexibility of remote attestation protocols. Introducing a shared message format such as CMW enables consistent support for different attestation message types, enables the evolution of message serialization formats without breaking compatibility, and avoids the need to redefine how messages are handled within each protocol.
+    },
+  keywords="evidence, attestation results, endorsments, reference values",
+  doi="10.17487/RFC9999",
   }
 
 @misc{rfc10005,
