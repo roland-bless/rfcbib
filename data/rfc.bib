@@ -195053,7 +195053,7 @@ url="https://www.rfc-editor.org/rfc/rfc8624.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-    note="Updated by RFC 9756",
+    note="Updated by RFCs 9756, 9933",
 url="https://www.rfc-editor.org/rfc/rfc8664.txt",
   key="RFC 8664",
   abstract={
@@ -197621,7 +197621,8 @@ issn="2070-1721",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-  url="https://www.rfc-editor.org/rfc/rfc8773.txt",
+    note="Obsoleted by RFC 9973",
+url="https://www.rfc-editor.org/rfc/rfc8773.txt",
   key="RFC 8773",
   abstract={
       This document specifies a TLS 1.3 extension that allows a server to authenticate with a combination of a certificate and an external pre-shared key (PSK).
@@ -216960,7 +216961,7 @@ url="https://www.rfc-editor.org/rfc/rfc9579.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-    note="Updated by RFC 9756",
+    note="Updated by RFCs 9756, 9933",
 url="https://www.rfc-editor.org/rfc/rfc9603.txt",
   key="RFC 9603",
   abstract={
@@ -222678,6 +222679,52 @@ url="https://www.rfc-editor.org/rfc/rfc9843.txt",
   doi="10.17487/RFC9849",
   }
 
+@misc{rfc9850,
+  author="M. Thomson and Y. Rosomakho and H. Tschofenig",
+  title="{The SSLKEYLOGFILE Format for TLS}",
+  howpublished="RFC 9850 (Informational)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9850",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9850.txt",
+  key="RFC 9850",
+  abstract={
+      This document describes a format that supports logging information about the secrets used in a TLS connection. Recording secrets to a file in SSLKEYLOGFILE format allows diagnostic and logging tools that use this file to decrypt messages exchanged by TLS endpoints. This format is intended for use in systems where TLS only protects test data.
+    },
+  keywords="network transparency, tls, blockchain",
+  doi="10.17487/RFC9850",
+  }
+
+@misc{rfc9851,
+  author="R. Salz and N. Aviram",
+  title="{TLS 1.2 is in Feature Freeze}",
+  howpublished="RFC 9851 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9851",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9851.txt",
+  key="RFC 9851",
+  abstract={
+      Use of TLS 1.3, which fixes some known deficiencies in TLS 1.2, is growing. This document specifies that no changes will be approved for TLS 1.2 outside of urgent security fixes (as determined by TLS Working Group consensus), new TLS Exporter Labels, and new Application-Layer Protocol Negotiation (ALPN) Protocol IDs. This applies to TLS only; it does not apply to DTLS (in any DTLS version).
+    },
+  keywords="TLS, features",
+  doi="10.17487/RFC9851",
+  }
+
 @misc{rfc9853,
   author="H. {Tschofenig (Ed.)} and A. Kraus and T. Fossati",
   title="{Return Routability Check for DTLS 1.2 and 1.3}",
@@ -224557,6 +224604,29 @@ algorithms.
   doi="10.17487/RFC9932",
   }
 
+@misc{rfc9933,
+  author="S. Sidor and Z. Rose and S. Peng and S. Peng and A. Stone",
+  title="{Carrying SR-Algorithm in Path Computation Element Communication Protocol (PCEP)}",
+  howpublished="RFC 9933 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9933",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9933.txt",
+  key="RFC 9933",
+  abstract={
+      This document specifies extensions to the Path Computation Element Communication Protocol (PCEP) to enhance support for Segment Routing (SR) with a focus on the use of Segment Identifiers (SIDs) and SR-Algorithms in Traffic Engineering (TE). The SR-Algorithm associated with a SID defines the path computation algorithm used by Interior Gateway Protocols (IGPs). It introduces mechanisms for PCEP peers to signal the SR-Algorithm associated with SIDs by encoding this information in Explicit Route Object (ERO) and Record Route Object (RRO) subobjects, enables SR-Algorithm constraints for path computation, and defines new metric types for the METRIC object. This document updates RFC 8664 and RFC 9603 to allow such extensions.
+    },
+  keywords="Prefix-SID Algorithm, Flexible Algorithm, IGP Algorithm Types",
+  doi="10.17487/RFC9933",
+  }
+
 @misc{rfc9934,
   author="S. Farrell",
   title="{Privacy-Enhanced Mail (PEM) File Format for Encrypted ClientHello (ECH)}",
@@ -225027,6 +225097,29 @@ used to manage TACACS+ over TLS.
   doi="10.17487/RFC9953",
   }
 
+@misc{rfc9954,
+  author="D. Stebila and S. Fluhrer and S. Gueron",
+  title="{Hybrid Key Exchange in TLS 1.3}",
+  howpublished="RFC 9954 (Informational)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9954",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9954.txt",
+  key="RFC 9954",
+  abstract={
+      Hybrid key exchange refers to using multiple key exchange algorithms simultaneously and combining the result with the goal of providing security even if a way is found to defeat the encryption for all but one of the component algorithms. It is motivated by the transition to post-quantum cryptography. This document provides a construction for hybrid key exchange in the Transport Layer Security (TLS) protocol version 1.3.
+    },
+  keywords="Post-Quantum",
+  doi="10.17487/RFC9954",
+  }
+
 @misc{rfc9956,
   author="G. White and T. Fossati and R. Geib",
   title="{A Non-Queue-Building Per-Hop Behavior (NQB PHB) for Differentiated Services}",
@@ -225400,6 +225493,29 @@ implementations to interoperate with each other.
     },
   keywords="IDR, GROW, BGP, BMP",
   doi="10.17487/RFC9972",
+  }
+
+@misc{rfc9973,
+  author="R. Housley",
+  title="{TLS 1.3 Extension for Using Certificates with an External Pre-Shared Key}",
+  howpublished="RFC 9973 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9973",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9973.txt",
+  key="RFC 9973",
+  abstract={
+      This document specifies a TLS 1.3 extension that allows TLS clients and servers to authenticate with certificates and provide confidentiality based on encryption with a symmetric key from the usual key agreement algorithm and an external pre-shared key (PSK). This Standards Track RFC obsoletes RFC 8773, which was an Experimental RFC.
+    },
+  keywords="cryptography, pre-shared key",
+  doi="10.17487/RFC9973",
   }
 
 @misc{rfc9974,
