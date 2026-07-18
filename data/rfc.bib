@@ -117780,7 +117780,7 @@ url="https://www.rfc-editor.org/rfc/rfc5268.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-    note="Updated by RFC 6402",
+    note="Obsoleted by RFC 10002, updated by RFC 6402",
 url="https://www.rfc-editor.org/rfc/rfc5272.txt",
   key="RFC 5272",
   abstract={
@@ -117807,7 +117807,7 @@ url="https://www.rfc-editor.org/rfc/rfc5272.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-    note="Updated by RFC 6402",
+    note="Obsoleted by RFC 10003, updated by RFC 6402",
 url="https://www.rfc-editor.org/rfc/rfc5273.txt",
   key="RFC 5273",
   abstract={
@@ -117831,7 +117831,7 @@ url="https://www.rfc-editor.org/rfc/rfc5273.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-    note="Updated by RFC 6402",
+    note="Obsoleted by RFC 10004, updated by RFC 6402",
 url="https://www.rfc-editor.org/rfc/rfc5274.txt",
   key="RFC 5274",
   abstract={
@@ -143376,7 +143376,8 @@ url="https://www.rfc-editor.org/rfc/rfc6391.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-  url="https://www.rfc-editor.org/rfc/rfc6402.txt",
+    note="Obsoleted by RFCs 10002, 10003, 10004",
+url="https://www.rfc-editor.org/rfc/rfc6402.txt",
   key="RFC 6402",
   abstract={
       This document contains a set of updates to the base syntax for CMC, a Certificate Management protocol using the Cryptographic Message Syntax (CMS). This document updates RFC 5272, RFC 5273, and RFC 5274.
@@ -226091,6 +226092,79 @@ implementations to interoperate with each other.
     },
   keywords="evidence, attestation results, endorsments, reference values",
   doi="10.17487/RFC9999",
+  }
+
+@misc{rfc10002,
+  author="J. {Mandel (Ed.)} and S. {Turner (Ed.)}",
+  title="{Certificate Management over CMS (CMC)}",
+  howpublished="RFC 10002 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="10002",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc10002.txt",
+  key="RFC 10002",
+  abstract={
+      This document defines the base syntax for CMC, a Certificate Management protocol using the Cryptographic Message Syntax (CMS). This protocol addresses two immediate needs within the Internet Public Key Infrastructure (PKI) community:
+      CMC also requires the use of the transport document (RFC 10003) and the requirements usage document (RFC 10004) along with this document for a full definition.
+      This document obsoletes RFCs 5272 and 6402.
+    },
+  keywords="Public Key Infrastructure, Certificate Management, Cryptographic Message Syntax",
+  doi="10.17487/RFC10002",
+  }
+
+@misc{rfc10003,
+  author="J. {Mandel (Ed.)} and S. {Turner (Ed.)}",
+  title="{Certificate Management over CMS (CMC): Transport Protocols}",
+  howpublished="RFC 10003 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="10003",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc10003.txt",
+  key="RFC 10003",
+  abstract={
+      This document defines a number of transport mechanisms that are used to move Certificate Management over CMS (CMC) messages. The transport mechanisms described in this document are HTTP, file, mail, and TCP.
+      This document obsoletes RFCs 5273 and 6402.
+    },
+  keywords="Public Key Infrastructure, Cryptographic Message Syntax, Certificate Management, Transport Protocols",
+  doi="10.17487/RFC10003",
+  }
+
+@misc{rfc10004,
+  author="J. {Mandel (Ed.)} and S. {Turner (Ed.)}",
+  title="{Certificate Management over CMS (CMC): Compliance Requirements}",
+  howpublished="RFC 10004 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="10004",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc10004.txt",
+  key="RFC 10004",
+  abstract={
+      This document provides a set of compliance statements about the Certificate Management over CMS (CMC) enrollment protocol. The ASN.1 structures and the transport mechanisms for the CMC enrollment protocol are covered in other documents (RFCs 10002 and 10003). This document provides the information needed to make a compliant version of CMC.
+      This document obsoletes RFCs 5274 and 6402.
+    },
+  keywords="Public Key Infrastructure, Cryptographic Message Syntax, Certificate Management, Compliance",
+  doi="10.17487/RFC10004",
   }
 
 @misc{rfc10005,
