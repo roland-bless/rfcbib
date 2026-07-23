@@ -226044,6 +226044,30 @@ implementations to interoperate with each other.
   doi="10.17487/RFC9995",
   }
 
+@misc{rfc9997,
+  author="C. Bormann",
+  title="{YANG-CBOR: Allocating SID Ranges for Private Enterprise Number (PEN) Holders}",
+  howpublished="RFC 9997 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9997",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9997.txt",
+  key="RFC 9997",
+  abstract={
+      YANG-CBOR (RFC 9254, ``Encoding of Data Modeled with YANG in the Concise Binary Object Representation (CBOR)'') defines YANG Schema Item iDentifiers (YANG SIDs), globally unique 63-bit unsigned integers used to identify YANG items. RFC 9595 (``YANG Schema Item iDentifier (YANG SID)'') defines ways to allocate these SIDs using IANA registries.
+      The present specification employs these SID allocation mechanisms to allocate ranges of 100 000 SIDs (representation size 64 bits) to each holder of an IANA Private Enterprise Number (PEN) of a value below 1 000 000. Holders of PENs of values smaller than 100 000 are also allocated ranges of 10 000 SIDs (representation size 32 bits).
+    },
+  keywords="YANG-CBOR",
+  doi="10.17487/RFC9997",
+  }
+
 @misc{rfc9998,
   author="M. Nottingham and M. Thomson",
   title="{Report from the IAB/W3C Workshop on Age-Based Restrictions on Content Access}",
@@ -226282,5 +226306,28 @@ implementations to interoperate with each other.
     },
   keywords="RSA, Diffie-Hellman, DH, DHE, ECDH, ECDHE",
   doi="10.17487/RFC10015",
+  }
+
+@misc{rfc10026,
+  author="S. Sheng and P. Thomassen",
+  title="{Operational Recommendations for DNSSEC Delegation Signer (DS) Automation}",
+  howpublished="RFC 10026 (Best Current Practice)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="10026",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc10026.txt",
+  key="RFC 10026",
+  abstract={
+      Enabling support for automatic acceptance of DNSSEC Delegation Signer (DS) parameters from the Child DNS operator (via RFCs 7344, 8078, and 9615) requires the Parental Agent, often a registry or registrar, to make a number of technical decisions around acceptance checks, error and success reporting, and multi-party issues such as concurrent updates. This document describes recommendations about how these points are best addressed in practice.
+    },
+  keywords="DNS, DS",
+  doi="10.17487/RFC10026",
   }
 
