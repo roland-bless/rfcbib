@@ -226052,6 +226052,30 @@ implementations to interoperate with each other.
   doi="10.17487/RFC9995",
   }
 
+@misc{rfc9996,
+  author="M. {Kucherawy (Ed.)} and W. Kumari and R. Sloan",
+  title="{Media Types for Protocol Buffers}",
+  howpublished="RFC 9996 (Informational)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9996",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9996.txt",
+  key="RFC 9996",
+  abstract={
+      This document registers media types for Protocol Buffers, a common
+   extensible mechanism for serializing structured data.
+    },
+  keywords="MIME, protobuf, media type, application",
+  doi="10.17487/RFC9996",
+  }
+
 @misc{rfc9997,
   author="C. Bormann",
   title="{YANG-CBOR: Allocating SID Ranges for Private Enterprise Number (PEN) Holders}",
@@ -226267,6 +226291,29 @@ implementations to interoperate with each other.
   doi="10.17487/RFC10008",
   }
 
+@misc{rfc10013,
+  author="S. Frost and T. Fossati and H. Tschofenig and H. Birkholz",
+  title="{Entity Attestation Token (EAT) Measured Component}",
+  howpublished="RFC 10013 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="10013",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc10013.txt",
+  key="RFC 10013",
+  abstract={
+      The term ``measured component'' refers to an object within the attester's target environment whose state can be sampled and typically digested using a cryptographic hash function. Examples of measured components include firmware stored in flash memory, software loaded into memory at start time, data stored in a file system, or values in a CPU register. This document provides the information model for the measured component and two associated data models. This separation is intentional: The JSON and Concise Binary Object Representation (CBOR) serializations, coupled with the media types and associated Constrained Application Protocol (CoAP) Content-Formats, enable the immediate use of the semantics within the Entity Attestation Token (EAT) framework. Meanwhile, the information model can be reused in future specifications to provide additional serializations, for example, using ASN.1.
+    },
+  keywords="EAT, measurements, claim, measured, component",
+  doi="10.17487/RFC10013",
+  }
+
 @misc{rfc10014,
   author="C. Pignataro and A. Farrel and T. Mizrahi",
   title="{Guidelines for Characterizing the Term ``OAM''}",
@@ -226314,6 +226361,58 @@ implementations to interoperate with each other.
     },
   keywords="RSA, Diffie-Hellman, DH, DHE, ECDH, ECDHE",
   doi="10.17487/RFC10015",
+  }
+
+@misc{rfc10019,
+  author="N. Karstens and D. Farinacci and M. McBride",
+  title="{Zeroconf Multicast Address Allocation Problem Statement and Requirements}",
+  howpublished="RFC 10019 (Informational)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="10019",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc10019.txt",
+  key="RFC 10019",
+  abstract={
+      This document surveys current problems with existing protocols for automatically assigning multicast IP addresses in zero-configuration (zeroconf) networking environments. It addresses key challenges, such as link-layer address collisions, hardware limitations, multicast snooping inefficiencies, and the need to avoid manual configuration. Based on these challenges, it derives requirements for a lightweight, decentralized solution for dynamically allocating unique multicast group addresses without central coordination.
+      The document presents explicit requirements covering discovery, allocation, conflict detection and resolution, and lease management. It also evaluates considerations specific to IPv6 and IPv4 multicast address ranges, and identifies approaches that are unsuited for zeroconf deployment. This foundation serves as a reference for developing future solutions for multicast address allocation that operate autonomously within local networks.
+    },
+  doi="10.17487/RFC10019",
+  }
+
+@misc{rfc10023,
+  author="M. Davids",
+  title="{The ``\_for-sale'' Underscored and Globally Scoped DNS Node Name}",
+  howpublished="RFC 10023 (Informational)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="10023",
+  year=2026,
+  month=jul,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc10023.txt",
+  key="RFC 10023",
+  abstract={
+      This document defines an operational convention that uses the
+   reserved underscored DNS leaf node name ``\_for-sale'' to indicate the
+   parent domain name is available for purchase.
+
+   The convention can be deployed without disrupting existing
+   operations, and it may be applied even when the domain name is still
+   actively in use.
+    },
+  keywords="domain name system, domain sale, domain brokerage, domain aftermarket, TXT record, attrleaf",
+  doi="10.17487/RFC10023",
   }
 
 @misc{rfc10026,
