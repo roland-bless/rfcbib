@@ -72409,7 +72409,8 @@ allocation protocol.
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-  url="https://www.rfc-editor.org/rfc/rfc3307.txt",
+    note="Updated by RFC 10028",
+url="https://www.rfc-editor.org/rfc/rfc3307.txt",
   key="RFC 3307",
   abstract={
       This document specifies guidelines that must be implemented by any 
@@ -145924,7 +145925,7 @@ url="https://www.rfc-editor.org/rfc/rfc6513.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-    note="Updated by RFCs 6515, 6625, 7385, 7441, 7582, 7899, 7900, 7902, 7988, 8534, 9081, 9573",
+    note="Updated by RFCs 6515, 6625, 7385, 7441, 7582, 7899, 7900, 7902, 7988, 8534, 9081, 9573, 10018",
 url="https://www.rfc-editor.org/rfc/rfc6514.txt",
   key="RFC 6514",
   abstract={
@@ -179560,7 +179561,8 @@ url="https://www.rfc-editor.org/rfc/rfc7983.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-  url="https://www.rfc-editor.org/rfc/rfc7988.txt",
+    note="Updated by RFC 10018",
+url="https://www.rfc-editor.org/rfc/rfc7988.txt",
   key="RFC 7988",
   abstract={
       RFCs 6513, 6514, and other RFCs describe procedures by which a Service Provider may offer Multicast VPN (MVPN) service to its customers.  These procedures create point-to-multipoint (P2MP) or multipoint-to-multipoint (MP2MP) trees across the Service Provider's backbone.  One type of P2MP tree that may be used is known as an ``Ingress Replication (IR) tunnel''.  In an IR tunnel, a parent node need not be directly connected to its child nodes.  When a parent node has to send a multicast data packet to its n child nodes, it does not use Layer 2 multicast, IP multicast, or MPLS multicast to do so.  Rather, it makes n individual copies, and then unicasts each copy, through an IP or MPLS unicast tunnel, to exactly one child node.  While the prior MVPN specifications allow the use of IR tunnels, those specifications are not always very clear or explicit about how the MVPN protocol elements and procedures are applied to IR tunnels.  This document updates RFCs 6513 and 6514 by adding additional details that are specific to the use of IR tunnels.
@@ -225536,6 +225538,29 @@ implementations to interoperate with each other.
   doi="10.17487/RFC9970",
   }
 
+@misc{rfc9971,
+  author="M. Konstantynowicz and V. Polak",
+  title="{Multiple Loss Ratio Search}",
+  howpublished="RFC 9971 (Informational)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="9971",
+  year=2026,
+  month=aug,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc9971.txt",
+  key="RFC 9971",
+  abstract={
+      This document describes an alternative to throughput in ``Benchmarking Methodology for Network Interconnect Devices'' (RFC 2544) by defining a new methodology called Multiple Loss Ratio Search (MLRsearch). MLRsearch aims to minimize Search Duration, support multiple loss ratio goals, and improve result repeatability and comparability.
+      MLRsearch is motivated by the pressing need to address the challenges of evaluating and testing the various data plane solutions, especially in software-based networking systems based on Commercial Off-the-Shelf (COTS) CPU hardware vs. purpose-built Application-Specific Integrated Circuit (ASIC) / Network Processing Unit (NPU) / Field-Programmable Gate Array (FPGA) hardware.
+    },
+  doi="10.17487/RFC9971",
+  }
+
 @misc{rfc9972,
   author="M. {Srivastava (Ed.)} and Y. Liu and C. {Lin (Ed.)} and J. Li",
   title="{Advanced BGP Monitoring Protocol (BMP) Statistics Types}",
@@ -226415,6 +226440,28 @@ implementations to interoperate with each other.
   doi="10.17487/RFC10015",
   }
 
+@misc{rfc10018,
+  author="R. {Parekh (Ed.)} and D. {Voyer (Ed.)} and C. Filsfils and H. Bidgoli and Z. Zhang",
+  title="{Multicast and Ethernet VPN with Segment Routing Point-to-Multipoint (P2MP) and Ingress Replication}",
+  howpublished="RFC 10018 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="10018",
+  year=2026,
+  month=aug,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc10018.txt",
+  key="RFC 10018",
+  abstract={
+      A Point-to-Multipoint (P2MP) tree in a Segment Routing (SR) domain carries traffic from a Root to a set of Leaves. This document specifies extensions to BGP encodings and procedures for P2MP trees and Ingress Replication used in BGP/MPLS IP VPNs and Ethernet VPNs (EVPNs) in an SR domain. This document updates RFCs 6514 and 7988.
+    },
+  doi="10.17487/RFC10018",
+  }
+
 @misc{rfc10019,
   author="N. Karstens and D. Farinacci and M. McBride",
   title="{Zeroconf Multicast Address Allocation Problem Statement and Requirements}",
@@ -226559,6 +226606,29 @@ implementations to interoperate with each other.
   doi="10.17487/RFC10027",
   }
 
+@misc{rfc10028,
+  author="N. Karstens and D. Farinacci and M. McBride",
+  title="{Updates to Dynamic IPv6 Multicast Address Group IDs}",
+  howpublished="RFC 10028 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="10028",
+  year=2026,
+  month=aug,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc10028.txt",
+  key="RFC 10028",
+  abstract={
+      This document describes limitations of the existing range of dynamic IPv6 multicast addresses specified in ``Allocation Guidelines for IPv6 Multicast Addresses'' (RFC 3307). It updates RFC 3307 by replacing these allocations with a new IANA registry in the ``IPv6 Multicast Address Space'' registry group. The document also defines initial contents of the new registry: a reduced allocation for the Multicast Address Dynamic Client Allocation Protocol (MADCAP) (RFC 2730), a range for Source-Specific Multicast (SSM), a Private Use range, a range for Experimental Use, and Solicited-Node multicast addresses (which were not previously noted in RFC 3307).
+    },
+  keywords="MADCAP, architecture",
+  doi="10.17487/RFC10028",
+  }
+
 @misc{rfc10029,
   author="R. Bellis",
   title="{DNS Multiple QTYPEs}",
@@ -226580,5 +226650,28 @@ implementations to interoperate with each other.
     },
   keywords="DNS, resource records",
   doi="10.17487/RFC10029",
+  }
+
+@misc{rfc10031,
+  author="R. Housley and C. Bonnell and J. Mandel and T. Okubo and M. StJohns",
+  title="{Media Access Control (MAC) Addresses in X.509 Certificates}",
+  howpublished="RFC 10031 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="10031",
+  year=2026,
+  month=aug,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc10031.txt",
+  key="RFC 10031",
+  abstract={
+      This document defines a new GeneralName.otherName for inclusion in the X.509 Subject Alternative Name (SAN) and Issuer Alternative Name (IAN) extensions to carry an IEEE Media Access Control (MAC) address. The new name form makes it possible to bind a Layer 2 interface identifier to a public key certificate. Additionally, this document defines how constraints on this name form can be encoded and processed in the X.509 Name Constraints extension (NCE).
+    },
+  keywords="MACsec, 802.1AE, X.509, SubjectAltName",
+  doi="10.17487/RFC10031",
   }
 
