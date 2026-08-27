@@ -192003,7 +192003,8 @@ url="https://www.rfc-editor.org/rfc/rfc8505.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-  url="https://www.rfc-editor.org/rfc/rfc8525.txt",
+    note="Updated by RFC 10035",
+url="https://www.rfc-editor.org/rfc/rfc8525.txt",
   key="RFC 8525",
   abstract={
       This document describes a YANG library that provides information about the YANG modules, datastores, and datastore schemas used by a network management server.  Simple caching mechanisms are provided to allow clients to minimize retrieval of this information.  This version of the YANG library supports the Network Management Datastore Architecture (NMDA) by listing all datastores supported by a network management server and the schema that is used by each of these datastores.
@@ -226719,6 +226720,29 @@ implementations to interoperate with each other.
     },
   keywords="MACsec, 802.1AE, X.509, SubjectAltName",
   doi="10.17487/RFC10031",
+  }
+
+@misc{rfc10035,
+  author="Z. Lin and B. Claise and I. D. Martinez-Casanueva",
+  title="{YANG Library: Addition of the augmented-by List}",
+  howpublished="RFC 10035 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="10035",
+  year=2026,
+  month=aug,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc10035.txt",
+  key="RFC 10035",
+  abstract={
+      ``YANG Library'' (RFC 8525) specifies the ``ietf-yang-library'' YANG module that provides information about the YANG modules, datastores, and datastore schemas used by a network management server.
+      This document augments the ``ietf-yang-library'' module to provide the augmented-by list. It facilitates the process of obtaining all dependencies between YANG modules by querying the network management server's YANG library. This document updates RFC 8525 to also include the augmented-by list.
+    },
+  doi="10.17487/RFC10035",
   }
 
 @misc{rfc10036,
