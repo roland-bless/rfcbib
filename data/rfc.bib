@@ -121611,7 +121611,7 @@ url="https://www.rfc-editor.org/rfc/rfc5440.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-    note="Updated by RFC 6138",
+    note="Updated by RFCs 6138, 10041",
 url="https://www.rfc-editor.org/rfc/rfc5443.txt",
   key="RFC 5443",
   abstract={
@@ -156537,7 +156537,7 @@ url="https://www.rfc-editor.org/rfc/rfc6982.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-    note="Updated by RFC 8770",
+    note="Updated by RFCs 8770, 10041",
 url="https://www.rfc-editor.org/rfc/rfc6987.txt",
   key="RFC 6987",
   abstract={
@@ -188644,7 +188644,8 @@ url="https://www.rfc-editor.org/rfc/rfc8373.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-  url="https://www.rfc-editor.org/rfc/rfc8379.txt",
+    note="Updated by RFC 10041",
+url="https://www.rfc-editor.org/rfc/rfc8379.txt",
   key="RFC 8379",
   abstract={
       When a link is being prepared to be taken out of service, the traffic needs to be diverted from both ends of the link. Increasing the metric to the highest value on one side of the link is not sufficient to divert the traffic flowing in the other direction.
@@ -197563,7 +197564,8 @@ url="https://www.rfc-editor.org/rfc/rfc8762.txt",
   institution="RFC Editor",
   organization="RFC Editor",
   address="Fremont, CA, USA",
-  url="https://www.rfc-editor.org/rfc/rfc8770.txt",
+    note="Updated by RFC 10041",
+url="https://www.rfc-editor.org/rfc/rfc8770.txt",
   key="RFC 8770",
   abstract={
       The Open Shortest Path First Version 2 (OSPFv2) protocol does not have a mechanism for a node to repel transit traffic if it is on the shortest path.  This document defines a bit called the Host-bit (H-bit).  This bit enables a router to advertise that it is a non-transit router.  This document also describes the changes needed to support the H-bit in the domain.  In addition, this document updates RFC 6987 to advertise Type 2 External and Not-So-Stubby Area (NSSA) Link State Advertisements (LSAs) (RFC 3101) with a high cost in order to repel traffic effectively.
@@ -226746,6 +226748,30 @@ implementations to interoperate with each other.
   doi="10.17487/RFC10031",
   }
 
+@misc{rfc10032,
+  author="F. Denis and S. Lucas",
+  title="{The AEGIS Authenticated Encryption Algorithms}",
+  howpublished="RFC 10032 (Informational)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="10032",
+  year=2026,
+  month=sep,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc10032.txt",
+  key="RFC 10032",
+  abstract={
+      This document describes the AEGIS-128L, AEGIS-256, AEGIS-128X, and AEGIS-256X AES-based authenticated encryption with associated data (AEAD) algorithms designed for high-performance applications. It also specifies their use as stream ciphers and message authentication codes (MACs).
+      The document is a product of the Crypto Forum Research Group (CFRG).
+    },
+  keywords="AEAD, AES, stream cipher, Message Authentication Code (MAC)",
+  doi="10.17487/RFC10032",
+  }
+
 @misc{rfc10033,
   author="T. Wiggers and K. Bashiri and S. Kölbl and J. Goodman and S. Kousidis",
   title="{Hash-Based Signatures: State and Backup Management}",
@@ -226931,6 +226957,30 @@ implementations to interoperate with each other.
       This document updates RFC 8060.
     },
   doi="10.17487/RFC10040",
+  }
+
+@misc{rfc10041,
+  author="L. Gong and W. Cheng and C. Lin and A. Lindem and R. Chen",
+  title="{Advertising Unreachable Links in OSPF}",
+  howpublished="RFC 10041 (Proposed Standard)",
+  series="Internet Request for Comments",
+  type="RFC",
+  number="10041",
+  year=2026,
+  month=sep,
+  issn="2070-1721",
+  publisher="RFC Editor",
+  institution="RFC Editor",
+  organization="RFC Editor",
+  address="Fremont, CA, USA",
+  url="https://www.rfc-editor.org/rfc/rfc10041.txt",
+  key="RFC 10041",
+  abstract={
+      OSPF Router Link State Advertisements (LSAs) use fixed-format encodings that always include advertised links in the default Shortest Path First (SPF) computation. For non-default SPF computations, e.g., Flexible Algorithms as described in RFC 9350, advertised OSPF links are used in the default SPF computation even if this is not intended. In order to advertise these links and not use them in the base SPF calculation, the metric LSLinkInfinity (0xffff) is used to specify that the link is unreachable. If all OSPF routers in an OSPF area support this functionality and have advertised the capability via an area-scoped OSPF Router Information LSA, then links advertised with a metric of LSLinkInfinity are considered unreachable.
+      MaxReachableLinkMetric (0xfffe) is defined to provide backward compatible reachability in specifications that previously specified advertisement of MaxLinkMetric (0xffff). This document updates RFC 5443, RFC 6987, RFC 8379, and RFC 8770 with respect to the advertisement of MaxReachableLinkMetric (0xfffe) rather than MaxLinkMetric (0xffff).
+    },
+  keywords="LSR Working Group, OSPF, ls",
+  doi="10.17487/RFC10041",
   }
 
 @misc{rfc10042,
