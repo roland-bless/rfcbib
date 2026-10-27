@@ -1,5 +1,11 @@
 # A bibtex file for the RFC collection (Internet standard documents and other documents published by the IETF, IRTF and individuals)
 
+You can find an up-to-date `rfc.bib` file in the `data/` subdirectory.
+It gets automatically pushed once a day in case there are updates from
+the rfc editor available.
+
+## Background
+
 If you're frequently citing RFCs as reference, you might want to have
 a bibtex file of all RFCs. So I wrote an XSLT script to translate the
 XML-based rfc index, which is provided by the RFC editor, into a
